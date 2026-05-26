@@ -684,6 +684,10 @@
     }
     .video-wrap:hover .video-controls { opacity: 1; }
 
+    @media (hover: none) {
+      .video-controls { opacity: 1; }
+    }
+
     .video-btn {
       width: 32px; height: 32px;
       border-radius: 50%;
@@ -788,7 +792,8 @@
       .hero { padding: 0 5%; }
       .about-grid { grid-template-columns: 1fr; }
       .about-photo-wrap { position: static; }
-      .about-photo { aspect-ratio: 16/7; }
+      .about-photo { aspect-ratio: 4/3; }
+      .about-photo img { object-position: center 15%; }
       .project-row, .project-row.flip { grid-template-columns: 1fr; }
       .project-row.flip .project-img { order: 1; border-left: none; border-bottom: 1px solid var(--border); }
       .project-row.flip .project-info { order: 2; }
@@ -843,26 +848,22 @@
       </div>
       <div class="about-content">
         <div class="eyebrow">Over mij</div>
-        <h3>Student AI-engineer</h3>
+        <h3>Student AI-engineer<br>met focus op <em>computer vision</em></h3>
         <p>Ik studeer aan <strong>Howest in Kortrijk</strong> en bouw applicaties waarbij modellen echt iets doen — bewegingen detecteren, video's analyseren, content genereren.</p>
         <p>Van MediaPipe-gebaseerde oefendetectie, VideoMAE-modellen die voetbalacties herkennen in matchvideo's, tot RAG-pipelines — mijn projecten draaien steeds rond hetzelfde idee: <strong>ruwe data omzetten naar bruikbare output via AI</strong>.</p>
         <div class="skills-section">
           <div class="skills-label">Technologieën</div>
           <div class="skill-chips">
             <span class="chip">Python</span>
-            <span class="chip">Pandas</span>
-            <span class="chip">NumPy</span>
-            <span class="chip">Scikit-learn</span>
-            <span class="chip">Matplotlib</span>
-            <span class="chip">Seaborn</span>
             <span class="chip">Flask</span>
+            <span class="chip">MediaPipe</span>
             <span class="chip">PyTorch</span>
             <span class="chip">Angular</span>
             <span class="chip">ASP.NET Core</span>
             <span class="chip">C#</span>
             <span class="chip">Docker</span>
             <span class="chip">Azure</span>
-            <span class="chip">SQL</span>
+            <span class="chip">MySQL</span>
             <span class="chip">WebSockets</span>
             <span class="chip">HTML</span>
             <span class="chip">CSS</span>
@@ -943,7 +944,7 @@
         <div class="project-img video-wrap contain-media">
           <span class="project-tag tag-industry">Industry</span>
           <span class="project-year">2025</span>
-          <video class="project-video" playsinline>
+          <video class="project-video" playsinline preload="metadata">
             <source src="media/Video Project.mp4" type="video/mp4">
           </video>
           <div class="video-controls">
@@ -985,7 +986,7 @@
         <div class="project-img video-wrap">
           <span class="project-tag tag-ai">AI · RAG</span>
           <span class="project-year">Zijproject</span>
-          <video class="project-video" playsinline>
+          <video class="project-video" playsinline preload="metadata">
             <source src="media/Video Project 1.mp4" type="video/mp4">
           </video>
           <div class="video-controls">
@@ -1026,7 +1027,7 @@
         <div class="project-img video-wrap contain-media">
           <span class="project-tag tag-research">Research</span>
           <span class="project-year">2026</span>
-          <video class="project-video" playsinline>
+          <video class="project-video" playsinline preload="metadata">
             <source src="media/Video Project 2.mp4" type="video/mp4">
           </video>
           <div class="video-controls">
